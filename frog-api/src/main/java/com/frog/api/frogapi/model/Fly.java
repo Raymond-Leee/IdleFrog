@@ -7,7 +7,8 @@ public class Fly {
     private int points;
 
     // make the fly with coordinate
-    public Fly(double x, double y){
+    public Fly(double x, double y, int points){
         this.coord = new Point2D.Double(x, y);
+        this.points = points;
     }
 }
