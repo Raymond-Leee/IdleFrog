@@ -5,23 +5,21 @@ class Fly {
         this.width = window.innerWidth;
         this.x = Math.floor(Math.random() * this.height);
         this.y = Math.floor(Math.random() * this.width);
-        this.pos = { x: this.x, y: this.y };
-    }
-
-    getCoord() {
-        return this.pos;
+        this.id = `fly-${Date.now()}`
+        //this.id = "fly"
     }
     killFly() {
-        const button = document.getElementById('fly');
+        const button = document.getElementById(this.id);
         button.parentNode.removeChild(button);
     }
     createButton() {
         const button = document.createElement("button");
         button.innerHTML = "Fly";
-        button.id = `fly-${Date.now()}`
+        button.id = this.id
         button.onclick = () => this.killFly();
-        button.style.left = `${this.x}px`; // Set the random x-coord
-        button.style.top = `${this.y}px`; // Set the random y-coord
+        button.style.position = "absolute";
+        button.style.top = `${this.x*0.9}px`; // Set the random x-coord
+        button.style.left = `${this.y*0.9}px`; // Set the random y-coord
         document.body.appendChild(button);
         return button;
     }
