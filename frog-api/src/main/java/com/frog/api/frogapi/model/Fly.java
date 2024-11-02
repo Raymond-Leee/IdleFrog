@@ -4,7 +4,7 @@ import java.awt.geom.Point2D;
 
 public class Fly {
     private Point2D coord;
-
+    private int points;
 
     // make the fly with coordinate
     public Fly(double x, double y){
