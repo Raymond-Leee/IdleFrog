@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.86.0/dist/phaser.js"></script>
+    <meta charset="UTF-8">
+    <title>Idle Frog!</title>
+</head>
+
+<body>
+    <script type = "text/javascript">   
+        var config = {
+            type: Phaser.AUTO,
+            width: 1280,
+            height: 720,
+            //scaling
+            scale: {
+                mode: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_BOTH
+            },
+            scene: {
+                preload: preload,
+                create: create,
+                update: update
+            }
+        }
+        
+        var game = new Phaser.Game(config);
+        var background;
+    
+        function preload(){
+    
+            this.load.image('background', '../Assets/blue.jpg');
+            // this.Load.image('lilypad', ###LILYPAD);
+            // this.Load.sprite('frog', ###FROG);
+            // this.Load.sprite('tongue', ###TONGUE);
+            
+        }
+    
+        function create(){
+            let { width, height } = this.sys.game.canvas;
+    
+            //scrolling bg
+            background = this.add.tileSprite(width/2, height/2, width, height, 'background');;
+
+        }
+    
+        function update(){
+            background.setTilePosition.x -= 1;
+        }
+    
+    </script>
+</body>
+
+</html>
