@@ -4,23 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="98f821e3-513d-4a36-a393-9a5cc2872944" name="Changes" comment="ui inits" />
+=======
     <list default="true" id="98f821e3-513d-4a36-a393-9a5cc2872944" name="Changes" comment="ui inits">
       <change beforePath="$PROJECT_DIR$/.idea/IdleFrog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IdleFrog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frog-ui/src/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/frog-ui/src/login/login.html" afterDir="false" />
     </list>
+>>>>>>> dfa40c3f5d74832dde6665b6f498418ece1b2184
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -34,12 +30,17 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
+    "last_opened_file_path": "C:/Users/felic/IdeaProjects/frog_project",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
+=======
     "git-widget-placeholder": "bazinga",
     "last_opened_file_path": "C:/Users/felic/IdeaProjects/frog_project/IdleFrog",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
+>>>>>>> dfa40c3f5d74832dde6665b6f498418ece1b2184
   }
 }]]></component>
   <component name="RunManager">
@@ -64,19 +65,6 @@
       <option name="presentableId" value="Default" />
       <updated>1730565869841</updated>
     </task>
-    <task id="LOCAL-00001" summary="ui inits">
-      <option name="closed" value="true" />
-      <created>1730568204424</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1730568204424</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="ui inits" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui inits" />
   </component>
 </project>
