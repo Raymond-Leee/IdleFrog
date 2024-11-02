@@ -6,5 +6,9 @@ public interface Insect {
     Point2D.Double getCoord();
     int getPoints();
 
+    boolean getWin();
+
+    int test();
+
 
 }
