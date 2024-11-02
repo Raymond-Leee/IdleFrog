@@ -1,8 +1,7 @@
-package Frog-UI;
-import java.io.*;
+package UI;
 import javax.swing.*;
 
-public class frogUI{
+public class UI{
     // Startup UI
     public static void startup() {
         //window
@@ -18,5 +17,13 @@ public class frogUI{
         window.setVisible(true);
     }
 
+    //Testing code
+    public static void main(String[] args){
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                startup();
+                }
+            });
+    }
 
 }
