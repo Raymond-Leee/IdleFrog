@@ -4,7 +4,7 @@
 </head>
 <style>
 .dropdown {
-    color: white;
+    color: black;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -17,14 +17,16 @@
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  overflow: auto;
+    display: none;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
 .dropdown-content a {
-  text-decoration: none;
-  display: block;
+    display: block;
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1}
@@ -35,7 +37,7 @@
 <body>
 
 <div class="dropdown">
-    <button id="upgradeButton" class="dropdown">Dropdown</button>
+    <button id="upgradeButton" class="dropdown">Upgrades</button>
     <div id="upgradeDropdown" class="dropdown-content">
         <a href="#width">Upgrade tongue width</a>
     </div>
@@ -45,7 +47,7 @@
 document.getElementById("upgradeButton").onclick = function() {myFunction()};
 
 function myFunction() {
-  document.getElementById("upgradeDropdown").classList.toggle("show");
+    document.getElementById("upgradeDropdown").classList.toggle("show");
 }
 </script>
 
