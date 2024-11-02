@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<style>
+.dropdown {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  overflow: auto;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+
+<body>
+
+<div class="dropdown">
+    <button id="upgradeButton" class="dropdown">Dropdown</button>
+    <div id="upgradeDropdown" class="dropdown-content">
+        <a href="#width">Upgrade tongue width</a>
+    </div>
+</div>
+
+<script>
+document.getElementById("upgradeButton").onclick = function() {myFunction()};
+
+function myFunction() {
+  document.getElementById("upgradeDropdown").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
