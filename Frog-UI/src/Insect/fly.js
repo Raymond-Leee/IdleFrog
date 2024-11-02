@@ -18,7 +18,7 @@ class Fly {
     createButton() {
         const button = document.createElement("button");
         button.innerHTML = "Fly";
-        button.id = "fly";
+        button.id = `fly-${Date.now()}`
         button.onclick = () => this.killFly();
         button.style.left = `${this.x}px`; // Set the random x-coord
         button.style.top = `${this.y}px`; // Set the random y-coord
@@ -26,10 +26,8 @@ class Fly {
         return button;
     }
 }
-//const fly = new Fly(1)
 function spawnFly(){
     fly = new Fly(1)
     fly.createButton()
 }
-//fly.checkVisible();
-setInterval(spawnFly, 5000); 
+setInterval(spawnFly, 1000); 
