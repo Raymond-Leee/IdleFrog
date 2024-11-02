@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="98f821e3-513d-4a36-a393-9a5cc2872944" name="Changes" comment="ui inits" />
-=======
     <list default="true" id="98f821e3-513d-4a36-a393-9a5cc2872944" name="Changes" comment="ui inits">
-      <change beforePath="$PROJECT_DIR$/.idea/IdleFrog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IdleFrog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frog-UI/src/login/upgrade.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frog-ui/src/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/frog-ui/src/login/login.html" afterDir="false" />
     </list>
->>>>>>> dfa40c3f5d74832dde6665b6f498418ece1b2184
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +23,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "bazinga",
