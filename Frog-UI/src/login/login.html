@@ -1,2 +1,36 @@
-<button (click)>New Game</button>
-<button (click)="">Load Game</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body {
+        font-family: 'Courier New', monospace;
+    }
+    
+    .overlay {
+        height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: rgba(255,255,255, 0.9);
+    }
+
+    .titleDiv {
+        text-align: center;
+        font-size: 48px;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="menu" class="overlay">
+    <div class="titleDiv">Another Frogging Idle Game
+        <button onclick="" id="New">New Game</button>
+        <button onclick="" id="Load">Load Game</button>
+    </div>
+</div>
+
+</body>
+</html>
