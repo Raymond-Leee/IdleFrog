@@ -2,11 +2,11 @@ import { spawnFly } from "../Insect/fly.js"
 export function upgradeFlyMultiplier(){
 
 }
-export function upgradeTongueMultiplier(){
-
+export function upgradeTongueMultiplier(value){
+    Tongue.pointMultiplier * = value;
 }
 export function upgradeTongueWidth(){
-
+    // Make Tongue sprite bigger
 }
 export function upgradeSpawnSpeed(current, mult, min){
     if(window.spawnFlyInterval){
