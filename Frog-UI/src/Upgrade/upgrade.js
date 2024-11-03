@@ -77,3 +77,4 @@ function initPts(){
 document.addEventListener("DOMContentLoaded", initUpgrades);
 document.addEventListener("DOMContentLoaded", initPts);
 setInterval(initPts, 1)
+setInterval(initUpgrades, 1) // cheaty method of solving our problem
