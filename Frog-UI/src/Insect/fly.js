@@ -61,17 +61,8 @@ export function spawnFly(){
     const fly = new Fly()
     fly.createButton()
 }
-let spawnSpeed = 500
-let mult = 0.9
-let min = 100
-
-window.spawnFlyInterval = setInterval(spawnFly, spawnSpeed);
+window.spawnSpeed = 500
 
 
-const upgradeSpawnButton = document.createElement("button");
-upgradeSpawnButton.innerHTML = "Upgrade Spawn Time";
-upgradeSpawnButton.onclick = () => {
-    spawnSpeed = upgradeSpawnSpeed(spawnSpeed, mult, min);
-    console.log(`New Interval: ${spawnSpeed}ms`);
-};
-document.body.appendChild(upgradeSpawnButton);
+window.spawnFlyInterval = setInterval(spawnFly, window.spawnSpeed);
+

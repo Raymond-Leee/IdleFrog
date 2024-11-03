@@ -51,10 +51,9 @@
 <div class="dropdown" style="float:right">
     <button id="upgradeButton" class="dropdown">Upgrades</button>
     <div id="upgradeDropdown" class="dropdown-content">
-        <button onclick="" class="button">Automatic Fly Swatter</button>
-        <button onclick="" class="button">Upgrade spawn rate</button>
-        <button onclick="" class="button">Upgrade tongue multiplier</button>
-        <button onclick="" class="button">Upgrade fly multiplier</button>
+        <button id="auto"  class="button">Automatic Fly Swatter</button>
+        <button id="spawn"  class="button">Upgrade spawn rate</button>
+        <button id="mult" class="button">Upgrade fly multiplier</button>
     </div>
 </div>
 
@@ -65,6 +64,7 @@
         document.getElementById("upgradeDropdown").classList.toggle("show");
     }
 </script>
+<script src="upgrade.js" type="module"></script>
 
 </body>
 </html>
