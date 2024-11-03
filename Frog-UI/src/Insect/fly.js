@@ -1,8 +1,8 @@
 import { upgradeSpawnSpeed } from "../Upgrade/upgrade.js";
 
+window.flyPoints = 1
 class Fly {
-    constructor(points) {
-        this.points = points;
+    constructor() {
         this.height = window.innerHeight;
         this.width = window.innerWidth;
         this.x = Math.floor(Math.random() * this.height);
@@ -12,13 +12,17 @@ class Fly {
     killFly() {
         const button = document.getElementById(this.id);
         button.parentNode.removeChild(button);
+        window.points += flyPoints // inc the total points
     }
     createButton() {
         const button = document.createElement("button"); // create btn
         //button.innerHTML = "Fly";
         button.id = this.id
-        button.onclick = () => this.killFly();
-        button.onclick = () => this.increaseSpawnSpeed();
+        button.onclick = () => {
+            this.killFly();
+            console.log(`${window.points}`)
+        }
+        
         button.style.position = "absolute"; // btn can be placed anywhere
         button.className = "flies"
         const image = document.createElement("img")
@@ -33,12 +37,12 @@ class Fly {
         document.body.appendChild(button);
         return button;
     }
-    increaseSpawnSpeed(){
-        this.spawnSpeed = 1
-    }
+    // increaseSpawnSpeed(){
+    //     this.spawnSpeed = 1
+    // }
 }
 export function spawnFly(){
-    const fly = new Fly(1)
+    const fly = new Fly()
     fly.createButton()
 }
 let spawnSpeed = 500
