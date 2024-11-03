@@ -1,4 +1,5 @@
 import { spawnFly } from "../Insect/fly.js"
+import { save, load } from "../login/login.js";
 
 export function upgradeFlyMultiplier(){
     window.flyPoints *= 2
@@ -80,6 +81,17 @@ function initPts(){
 // Modify the points and watch the changes
 // watchedData.points = 10;  // Points updated: 10
 // watchedData.points = 20;  // Points updated: 20
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    load(); // Load the saved values when the DOM is ready
+    // Initialize other parts of your application here
+    // Save data before the page is unloaded
+    window.addEventListener("beforeunload", () => {
+        save();
+    });
+});
+
 
 document.addEventListener("DOMContentLoaded", initUpgrades);
 document.addEventListener("DOMContentLoaded", initPts);
