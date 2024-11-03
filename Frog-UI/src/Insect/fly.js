@@ -2,15 +2,15 @@
 
 window.flyPoints = 1 // fly mult
 window.swatValue = 0 // swatting
-var maxTime = 2000
+window.maxTime = 2000 // disappear time
 window.points=0 // total pts
 
 class Fly {
     constructor() {
         this.height = window.innerHeight;
         this.width = window.innerWidth;
-        this.x = Math.floor(Math.random() * this.height);
-        this.y = Math.floor(Math.random() * this.width);
+        this.x = Math.floor(Math.random() * this.height * 0.98);
+        this.y = Math.floor(Math.random() * this.width * 0.8) + 0.12 * this.width;
         this.id = `fly-${Date.now()}` // make unique IDs for each btn
     }
     killFly() {
@@ -51,7 +51,7 @@ class Fly {
                 window.points += window.swatValue * window.flyPoints
                 //console.log(`${this.id}`)
             }
-        }, maxTime); // remove the fly after set time
+        }, window.maxTime); // remove the fly after set time
         document.body.appendChild(button);
 
 

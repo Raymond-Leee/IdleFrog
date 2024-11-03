@@ -3,8 +3,8 @@ import { spawnFly } from "../Insect/fly.js"
 export function upgradeFlyMultiplier(){
     window.flyPoints *= 2
 }
-export function upgradeTongueMultiplier(){
-
+export function upgradeSwatSpeed(){
+    window.maxTime *= 0.9
 }
 export function upgradeAutoSwatter(){
     if(window.swatValue + 0.1 <= 1.5)
@@ -29,18 +29,25 @@ export function upgradeSpawnSpeed(current, mult, min){
 }
 
 let flyMult = 0.9
-let minSpawn = 100
+let minSpawn = 1
 
 function initUpgrades(){
     const upgradeFlyMultiplierButton = document.getElementById("mult")
-    upgradeFlyMultiplierButton.innerHTML = "Upgrade Fly Multiplier"
+    //upgradeFlyMultiplierButton.innerHTML = "Upgrade Fly Multiplier"
     upgradeFlyMultiplierButton.onclick = () =>{
         upgradeFlyMultiplier();
         console.log(`${flyPoints}`)
     }
 
+    const upgradeSwatSpeedButton = document.getElementById("swatter")
+    //upgradeSwatSpeedButton.innerHTML = "Upgrade Auto Swatter Speed"
+    upgradeSwatSpeedButton.onclick = () =>{
+        upgradeSwatSpeed()
+        console.log(`${window.maxTime}`)
+    }
+
     const upgradeAutoSwatterButton = document.getElementById("auto")
-    upgradeAutoSwatterButton.innerHTML = "Upgrade Auto Swatter"
+    //upgradeAutoSwatterButton.innerHTML = "Upgrade Swat Speed"
     upgradeAutoSwatterButton.onclick = () =>{
         upgradeAutoSwatter()
         console.log(`${window.swatValue}`)
