@@ -1,4 +1,5 @@
 import { spawnFly } from "../Insect/fly.js"
+
 window.points = 0
 export function upgradeFlyMultiplier(){
     window.flyPoints *= 2

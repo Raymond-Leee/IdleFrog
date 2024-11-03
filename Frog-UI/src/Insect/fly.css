@@ -1,4 +1,5 @@
 .flies{
+    background-image: url("../../../Assets/fly.png");
     border:none;
     background-size:cover;
     position: absolute;
