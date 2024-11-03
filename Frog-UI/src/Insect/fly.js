@@ -1,4 +1,4 @@
-import { upgradeSpawnSpeed } from "../Upgrade/upgrade";
+import { upgradeSpawnSpeed } from "../Upgrade/upgrade.js";
 
 class Fly {
     constructor(points) {
@@ -37,7 +37,7 @@ class Fly {
         this.spawnSpeed = 1
     }
 }
-function spawnFly(){
+export function spawnFly(){
     const fly = new Fly(1)
     fly.createButton()
 }
@@ -51,6 +51,6 @@ const upgradeSpawnButton = document.createElement("button");
 upgradeSpawnButton.innerHTML = "Upgrade Spawn Time";
 upgradeSpawnButton.onclick = () => {
     spawnSpeed = upgradeSpawnSpeed(spawnSpeed, mult, min);
-    console.log(`New Interval: ${currentInterval}ms`);
+    console.log(`New Interval: ${spawnSpeed}ms`);
 };
 document.body.appendChild(upgradeSpawnButton);
