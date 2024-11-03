@@ -2,14 +2,22 @@ import { spawnFly } from "../Insect/fly.js"
 import { save, load } from "../login/login.js";
 
 export function upgradeFlyMultiplier(){
-    window.flyPoints *= 2
+    if(window.points <= window.pointMultiplierCost){
+        window.points -= window.flyPoints
+        window.flyPoints *= 2
+    }
 }
 export function upgradeSwatSpeed(){
-    window.maxTime *= 0.9
+    if(window.points <= window.swatRateCost){
+        window.points -= window.swatRateCost
+        window.maxTime *= 0.9
+    }
 }
 export function upgradeAutoSwatter(){
-    if(window.swatValue + 0.1 <= 1.5)
+    if(window.swatValue + 0.1 <= 1.5){
+        window.points -= window.autoSwatCost
         window.swatValue += 0.1
+    }
     else{
         window.swatValue = 1.5
     }
@@ -20,6 +28,9 @@ export function upgradeAutoSwatter(){
 export function upgradeSpawnSpeed(current, mult, min){
     if(window.spawnFlyInterval){
         clearInterval(window.spawnFlyInterval)
+    }
+    if(!(current <= min)){
+        window.points -= window.spawnRateCost
     }
     current *= mult
     if(current < min){
@@ -39,7 +50,7 @@ function initUpgrades(){
         upgradeFlyMultiplier();
         window.pointMultiplierLevel += 1
         upgradeFlyMultiplierButton.innerHTML = `(${window.pointMultiplierLevel}) 
-        Upgrade Fly Point Multiplier: ${window.pointMultiplierCost + (10 * Math.pow(1.1, window.pointMultiplierLevel))} Points`
+        Upgrade Fly Point Multiplier: ${window.pointMultiplierCost + (10 * Math.pow(2, window.pointMultiplierLevel))} Points`
         console.log(`${flyPoints}`)
     }
 
@@ -49,7 +60,7 @@ function initUpgrades(){
         upgradeSwatSpeed()
         window.swatRateLevel += 1
         upgradeSwatSpeedButton.innerHTML = `(${window.swatRateLevel}) 
-        Upgrade Swat Speed: ${window.swatRateCost + (10 * Math.pow(1.1, swatRateLevel))} Points`
+        Upgrade Swat Speed: ${window.swatRateCost + (10 * Math.pow(2, swatRateLevel))} Points`
         console.log(`${window.maxTime}`)
     }
 
@@ -59,7 +70,7 @@ function initUpgrades(){
         upgradeAutoSwatter()
         window.autoSwatLevel += 1
         upgradeAutoSwatterButton.innerHTML = `(${window.autoSwatLevel}) 
-        Upgrade Spawn Rate: ${window.autoSwatCost + (10 * Math.pow(1.1, window.autoSwatLevel))} Points`
+        Upgrade Spawn Rate: ${window.autoSwatCost + (10 * Math.pow(2, window.autoSwatLevel))} Points`
         console.log(`${window.swatValue}`)
     }
 
@@ -69,7 +80,7 @@ function initUpgrades(){
         window.spawnSpeed = upgradeSpawnSpeed(window.spawnSpeed, flyMult, minSpawn);
         window.spawnRateLevel += 1
         upgradeSpawnButton.innerHTML = `(${window.spawnRateLevel}) 
-        Upgrade Spawn Rate: ${window.spawnRateCost + (10 * Math.pow(1.1, window.spawnRateLevel))} Points`
+        Upgrade Spawn Rate: ${window.spawnRateCost + (10 * Math.pow(2, window.spawnRateLevel))} Points`
         console.log(`New Interval: ${window.spawnSpeed}ms`);
     };
 }

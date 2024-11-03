@@ -12,6 +12,7 @@ window.autoSwatCost = 50 // initial automatic fly swatter cost
 window.swatRateCost = 100 // initial fly swatter rate cost
 window.spawnRateCost = 50 // initial fly spawn rate cost
 window.pointMultiplierCost = 100 // initial point multiplier cost
+window.spawnSpeed = 20000
 
 class Fly {
     constructor() {
@@ -87,7 +88,6 @@ export function spawnFly(){
     const fly = new Fly()
     fly.createButton()
 }
-window.spawnSpeed = 500
 
 
 window.spawnFlyInterval = setInterval(spawnFly, window.spawnSpeed);
