@@ -3,7 +3,7 @@
 window.flyPoints = 1 // fly mult
 window.swatValue = 0 // swatting
 window.maxTime = 2000 // disappear time
-window.points=0 // total pts
+window.points = 0 // total pts
 
 class Fly {
     constructor() {
