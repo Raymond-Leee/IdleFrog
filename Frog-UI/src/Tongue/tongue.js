@@ -1,6 +1,6 @@
 class Tongue {
     constructor(pointMultiplier) {
-        this.pointMultiplier = pointMultiplier;
+        static this.pointMultiplier = pointMultiplier;
         this.height = 0;
         this.width = window.innerWidth / 2;
         this.x = Math.floor(Math.random() * this.height);
@@ -11,8 +11,8 @@ class Tongue {
         tongue = new Tongue(1);
     }
 
-    function changeMultiplier() {
-        this.pointMultiplier *= 2;
+    function changeMultiplier(value) {
+        static pointMultiplier *= value;
         return pointMultiplier;
     }
 }
