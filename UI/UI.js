@@ -28,7 +28,7 @@ function preload(){
     this.load.image('tongue', '../Assets/tongue.png');
     
     //COMMENTED OUT TO KEEP MEM DOWN LOL
-    this.load.script('spawnFly', "../Frog-UI/src/Insect/fly.js");
+    //this.load.script('spawnFly', "../Frog-UI/src/Insect/fly.js");
     
 }
 
