@@ -3,6 +3,11 @@
 <head>
 </head>
 <style>
+    .disabled {
+        cursor: not-allowed;
+        font-size: 16px;
+    }
+
     .dropdown {
         font-family: "Comic Sans MS", cursive, sans-serif;
         color: black;
@@ -22,24 +27,21 @@
         position: absolute;
         right: 0;
         background-color: #f9f9f9;
-        min-width: 200px;
+        min-width: 300px;
         z-index: 1;
-        width: 50%;
     }
 
     .dropdown-content a {
         display: block;
     }
 
-    .dropdown-content a:hover {background-color: #f1f1f1}
-
     .show {display:block;}
 
     .button {
-    	border: none;
-          color: black;
-          text-align: left;
-          display: inline-block;
+        border: none;
+        color: black;
+        text-align: left;
+        display: inline-block;
         font-family: "Comic Sans MS", cursive, sans-serif;
         cursor: pointer;
         background-color: transparent;
@@ -51,22 +53,22 @@
 <div class="dropdown" style="float:right">
     <button id="upgradeButton" class="dropdown">Upgrades</button>
     <div id="upgradeDropdown" class="dropdown-content">
-        <button id="auto"  class="button">Automatic Fly Swatter</button>
-        <button id="swatter" class="button">Upgrade Swat Speed</button>
-        <button id="spawn"  class="button">Upgrade Spawn Rate</button>
-        <button id="mult" class="button">Upgrade Fly Point Multiplier</button>
+        <button onclick="" class="button">(0) Automatic Fly Swatter: 50 Points</button>
+        <button onclick="" class="button">(0) Upgrade Swat Rate: 100 Points</button>
+        <button onclick="" class="button">(0) Upgrade Spawn Rate: 50 Points</button>
+        <button onclick="" class="button">(0) Upgrade Fly Point Multiplier: 100 Points</button>
     </div>
 </div>
-<button id="pts" class="button disabled" style="float:right">Points: 0</button>
+
+<button class="button disabled" style="float:right">Points: TBA</button>
+
 <script>
     document.getElementById("upgradeButton").onclick = function() {myFunction()};
 
     function myFunction() {
         document.getElementById("upgradeDropdown").classList.toggle("show");
     }
-    
 </script>
-<script src="upgrade.js" type="module"></script>
 
 </body>
 </html>
