@@ -41,6 +41,7 @@ function initUpgrades(){
         upgradeFlyMultiplierButton.innerHTML = `(${window.pointMultiplierLevel}) 
         Upgrade Fly Point Multiplier: ${window.pointMultiplierCost + (10 * Math.pow(1.1, window.pointMultiplierLevel))} Points`
         console.log(`${flyPoints}`)
+        
     }
 
     const upgradeSwatSpeedButton = document.getElementById("swatter")
