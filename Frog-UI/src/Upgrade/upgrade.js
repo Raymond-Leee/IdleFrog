@@ -1,4 +1,4 @@
-
+import { spawnFly } from "../Insect/fly.js"
 export function upgradeFlyMultiplier(){
 
 }
