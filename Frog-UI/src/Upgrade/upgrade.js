@@ -1,6 +1,5 @@
 import { spawnFly } from "../Insect/fly.js"
 
-window.points = 0
 export function upgradeFlyMultiplier(){
     window.flyPoints *= 2
 }
@@ -37,7 +36,7 @@ function initUpgrades(){
     upgradeFlyMultiplierButton.innerHTML = "Upgrade Fly Multiplier"
     upgradeFlyMultiplierButton.onclick = () =>{
         upgradeFlyMultiplier();
-        console.log(`${flyMult}`)
+        console.log(`${flyPoints}`)
     }
 
     const upgradeAutoSwatterButton = document.getElementById("auto")
@@ -54,4 +53,27 @@ function initUpgrades(){
         console.log(`New Interval: ${window.spawnSpeed}ms`);
     };
 }
+function initPts(){
+    const pointField = document.getElementById("pts")
+    setTimeout(() => {
+        pointField.innerHTML = `Points: ${Math.trunc(window.points * 100) / 100}`
+    }, 1);
+}
+//import { createWatchedObject } from './watch.js';
+
+// const data = { points: 0 };
+// const watchedData = createWatchedObject(data, (updatedData) => {
+//     console.log(`Points updated: ${updatedData.points}`);
+//     const upgradeButton = document.getElementById("pts");
+//     if (upgradeButton) {
+//         upgradeButton.innerHTML = `Upgrades (${updatedData.points})`;
+//     }
+// });
+
+// Modify the points and watch the changes
+// watchedData.points = 10;  // Points updated: 10
+// watchedData.points = 20;  // Points updated: 20
+
 document.addEventListener("DOMContentLoaded", initUpgrades);
+document.addEventListener("DOMContentLoaded", initPts);
+setInterval(initPts, 1)
