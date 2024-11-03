@@ -1,27 +1,15 @@
 import { spawnFly } from "../Insect/fly.js"
 import { save, load } from "../login/login.js";
 
-window.autoSwatLevel = 0 // initial automatic fly swatter level
-window.swatRateLevel = 0 // initial fly swatter rate level
-window.spawnRateLevel = 0 // initial fly spawn rate level
-window.pointMultiplierLevel = 0 // initial point multiplier level
-window.autoSwatCost = 50 // initial automatic fly swatter cost
-window.swatRateCost = 100 // initial fly swatter rate cost
-window.spawnRateCost = 50 // initial fly spawn rate cost
-window.pointMultiplierCost = 100 // initial point multiplier cost
-
 export function upgradeFlyMultiplier(){
     window.flyPoints *= 2
-    upgradeFlyMultiplierButton.innerHTML = `(${window.pointMultiplierLevel + 1}) Upgrade Fly Point Multiplier: ${window.pointMultiplierCost + (10 * Math.pow(1.1, x))} Points`
 }
 export function upgradeSwatSpeed(){
     window.maxTime *= 0.9
-    upgradeSwatSpeedButton.innerHTML = `(${window.swatRateLevel + 1}) Upgrade Fly Point Multiplier: ${window.swatRateCost + (10 * Math.pow(1.1, x))} Points`
 }
 export function upgradeAutoSwatter(){
     if(window.swatValue + 0.1 <= 1.5)
         window.swatValue += 0.1
-        upgradeAutoSwatterButton.innerHTML = `(${window.autoSwatLevel + 1}) Upgrade Fly Point Multiplier: ${window.autoSwatCost + (10 * Math.pow(1.1, x))} Points`
     else{
         window.swatValue = 1.5
     }
@@ -38,7 +26,6 @@ export function upgradeSpawnSpeed(current, mult, min){
         current = min
     }
     window.spawnFlyInterval = setInterval(spawnFly, current)
-    upgradeSpawnButton.innerHTML = `(${window.spawnRateLevel + 1}) Upgrade Fly Point Multiplier: ${window.spawnRateCost + (10 * Math.pow(1.1, x))} Points`
     return current;
 }
 
@@ -54,7 +41,6 @@ function initUpgrades(){
         upgradeFlyMultiplierButton.innerHTML = `(${window.pointMultiplierLevel}) 
         Upgrade Fly Point Multiplier: ${window.pointMultiplierCost + (10 * Math.pow(1.1, window.pointMultiplierLevel))} Points`
         console.log(`${flyPoints}`)
-        
     }
 
     const upgradeSwatSpeedButton = document.getElementById("swatter")
