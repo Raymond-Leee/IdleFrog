@@ -3,4 +3,5 @@
     background-size:cover;
     position: absolute;
     background-color: transparent;
+    cursor: url("../../../Assets/cursor.png"), auto;
 }

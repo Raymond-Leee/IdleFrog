@@ -20,8 +20,8 @@ class Fly {
         button.className = "flies"
         const image = document.createElement("img")
         image.src = "../../../Assets/fly.png"
-        image.style.width = "20px"; // Set image width
-        image.style.height = "20px"; 
+        image.style.width = "40px"; // Set image width
+        image.style.height = "40px"; 
         button.style.top = `${this.x*0.9}px`; // Set the random x-coord
         button.style.left = `${this.y*0.9}px`; // Set the random y-coord
         button.appendChild(image)
