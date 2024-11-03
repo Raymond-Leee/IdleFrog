@@ -3,6 +3,11 @@
 <head>
 </head>
 <style>
+    .disabled {
+          cursor: not-allowed;
+        font-size: 16px;
+    }
+
     .dropdown {
         font-family: "Comic Sans MS", cursive, sans-serif;
         color: black;
@@ -36,7 +41,7 @@
     .show {display:block;}
 
     .button {
-    	border: none;
+        border: none;
           color: black;
           text-align: left;
           display: inline-block;
@@ -51,11 +56,13 @@
 <div class="dropdown" style="float:right">
     <button id="upgradeButton" class="dropdown">Upgrades</button>
     <div id="upgradeDropdown" class="dropdown-content">
-        <button id="auto"  class="button">Automatic Fly Swatter</button>
-        <button id="spawn"  class="button">Upgrade spawn rate</button>
-        <button id="mult" class="button">Upgrade fly multiplier</button>
+        <button onclick="" class="button">Automatic Fly Swatter</button>
+        <button onclick="" class="button">Upgrade spawn rate</button>
+        <button onclick="" class="button">Upgrade fly multiplier</button>
     </div>
 </div>
+
+<button class="button disabled" style="float:right">Points: TBA</button>
 
 <script>
     document.getElementById("upgradeButton").onclick = function() {myFunction()};
@@ -64,7 +71,6 @@
         document.getElementById("upgradeDropdown").classList.toggle("show");
     }
 </script>
-<script src="upgrade.js" type="module"></script>
 
 </body>
 </html>
