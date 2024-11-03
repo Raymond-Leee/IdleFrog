@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-    body {
-        font-family: 'Courier New', monospace;
-    }
-    
-    .overlay {
-        height: 100%;
-		width: 0;
-		position: fixed;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		background-color: rgba(255,255,255, 0.9);
-    }
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
 
-    .titleDiv {
-        text-align: center;
-        font-size: 48px;
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(255,255,255, 0.9);
+            display: on;
+        }
+
+        .titleDiv {
+            font-size: 48px;
+            margin-left: 125px;
+        }
+
+        .button {
+              border: none;
+              color: black;
+              text-align: center;
+              display: inline-block;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+              font-size: 48px;
+              margin: 10px 125px;
+              cursor: pointer;
+            background-color: transparent;
     }
-</style>
+    </style>
 </head>
 
 <body>
 
 <div id="menu" class="overlay">
     <div class="titleDiv">Another Frogging Idle Game</div>
-    <button onclick="" id="New">New Game</button>
-    <button onclick="" id="Load">Load Game</button>
+    <button onclick="" class="button">New Game</button>
+    <button onclick="" class="button">Continue</button>
 </div>
 
 </body>
