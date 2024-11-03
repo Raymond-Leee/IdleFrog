@@ -6,11 +6,10 @@
     .dropdown {
         font-family: "Comic Sans MS", cursive, sans-serif;
         color: black;
-        padding: 16px;
         font-size: 16px;
         border: none;
         cursor: pointer;
-        min-width: 200px;
+        min-width: 300px;
     }
 
     .dropdown {
@@ -25,6 +24,7 @@
           background-color: #f9f9f9;
           min-width: 200px;
           z-index: 1;
+          width: 50%;
     }
 
     .dropdown-content a {
@@ -36,6 +36,7 @@
     .show {display:block;}
 
     .button {
+    	border: none;
           color: black;
           text-align: left;
           display: inline-block;
@@ -50,7 +51,7 @@
 <div class="dropdown" style="float:right">
     <button id="upgradeButton" class="dropdown">Upgrades</button>
     <div id="upgradeDropdown" class="dropdown-content">
-        <button onclick="" class="button">Upgrade tongue width</button>
+        <button onclick="" class="button">Automatic Fly Swatter</button>
         <button onclick="" class="button">Upgrade spawn rate</button>
         <button onclick="" class="button">Upgrade tongue multiplier</button>
         <button onclick="" class="button">Upgrade fly multiplier</button>
