@@ -1,9 +1,9 @@
 //import { upgradeSpawnSpeed } from "../Upgrade/upgrade.js";
 
-window.flyPoints = 1
-window.swatValue = 0
+window.flyPoints = 1 // fly mult
+window.swatValue = 0 // swatting
 var maxTime = 2000
-window.points=0
+window.points=0 // total pts
 
 class Fly {
     constructor() {
@@ -14,13 +14,16 @@ class Fly {
         this.id = `fly-${Date.now()}` // make unique IDs for each btn
     }
     killFly() {
+        // const pointField = document.getElementById("pts")
+        // pointField.innerHTML = `${window.points}`
         const button = document.getElementById(this.id);
         button.parentNode.removeChild(button);
-        window.points += flyPoints // inc the total points
+        window.points += window.flyPoints // inc the total points
     }
     deleteFly(){
         const button = document.getElementById(this.id)
         button.parentNode.removeChild(button)
+        window.points += window.swatValue * window.flyPoints
     }
     createButton() {
         const button = document.createElement("button"); // create btn
@@ -28,7 +31,7 @@ class Fly {
         button.id = this.id
         button.onclick = () => {
             this.killFly();
-            console.log(`${window.points * window.flyPoints}`)
+            console.log(`${window.points + window.flyPoints}`)
         }
         
         button.style.position = "absolute"; // btn can be placed anywhere
@@ -45,6 +48,7 @@ class Fly {
         setTimeout(() => {
             if (document.body.contains(button)) {
                 button.parentNode.removeChild(button);
+                window.points += window.swatValue * window.flyPoints
                 //console.log(`${this.id}`)
             }
         }, maxTime); // remove the fly after set time
@@ -58,6 +62,19 @@ class Fly {
     //     this.spawnSpeed = 1
     // }
 }
+// watch the point var
+// function createWatchedObject(obj, callback) {
+//     return new Proxy(obj, {
+//         set(target, property, value) {
+//             target[property] = value;
+//             callback(target);
+//             return true;
+//         }
+//     });
+// }
+
+// export { createWatchedObject };
+
 export function spawnFly(){
     const fly = new Fly()
     fly.createButton()
@@ -65,5 +82,5 @@ export function spawnFly(){
 window.spawnSpeed = 500
 
 
-window.spawnSpeed = setInterval(spawnFly, window.spawnSpeed);
+window.spawnFlyInterval = setInterval(spawnFly, window.spawnSpeed);
 
