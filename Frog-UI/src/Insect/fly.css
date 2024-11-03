@@ -1,7 +1,10 @@
 .flies{
+    background-image: url("../../../Assets/fly.png");
     border:none;
     background-size:cover;
     position: absolute;
     background-color: transparent;
     cursor: url("../../../Assets/cursor.png"), auto;
+    height: 40px;
+    width: 40px;
 }

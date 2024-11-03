@@ -26,9 +26,7 @@ function preload(){
     this.load.image('lilypad', '../Assets/lilypad.png');
     this.load.image('frog', '../Assets/frog.png');
     this.load.image('tongue', '../Assets/tongue.png');
-    
-    //COMMENTED OUT TO KEEP MEM DOWN LOL
-    this.load.script('spawnFly', "../Frog-UI/src/Insect/fly.js");
+    //this.load.html('upgrades', '../Frog-UI/src/Upgrade/upgrade.html');
     
 }
 
@@ -42,8 +40,6 @@ function create(){
 
     frog = this.add.image(width/2, height - 150, 'frog');
     frog.setScale(3, 3);
-
-    //let fly = this.add.script('spawnFly');
 
 }
 

@@ -3,11 +3,6 @@
 <head>
 </head>
 <style>
-    .disabled {
-        cursor: not-allowed;
-        font-size: 16px;
-    }
-
     .dropdown {
         font-family: "Comic Sans MS", cursive, sans-serif;
         color: black;
@@ -41,10 +36,10 @@
     .show {display:block;}
 
     .button {
-        border: none;
-        color: black;
-        text-align: left;
-        display: inline-block;
+    	border: none;
+          color: black;
+          text-align: left;
+          display: inline-block;
         font-family: "Comic Sans MS", cursive, sans-serif;
         cursor: pointer;
         background-color: transparent;
@@ -56,21 +51,22 @@
 <div class="dropdown" style="float:right">
     <button id="upgradeButton" class="dropdown">Upgrades</button>
     <div id="upgradeDropdown" class="dropdown-content">
-        <button onclick="" class="button">Automatic Fly Swatter</button>
-        <button onclick="" class="button">Upgrade spawn rate</button>
-        <button onclick="" class="button">Upgrade fly multiplier</button>
+        <button id="auto"  class="button">Automatic Fly Swatter</button>
+        <button id="swatter" class="button">Upgrade Swat Speed</button>
+        <button id="spawn"  class="button">Upgrade Spawn Rate</button>
+        <button id="mult" class="button">Upgrade Fly Point Multiplier</button>
     </div>
 </div>
-
-<button class="button disabled" style="float:right">Points: TBA</button>
-
+<button id="pts" class="button disabled" style="float:right">Points: 0</button>
 <script>
     document.getElementById("upgradeButton").onclick = function() {myFunction()};
 
     function myFunction() {
         document.getElementById("upgradeDropdown").classList.toggle("show");
     }
+    
 </script>
+<script src="upgrade.js" type="module"></script>
 
 </body>
 </html>

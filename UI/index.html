@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href = "/Frog-UI/src/Insect/fly.css">
+<link rel="stylesheet" href = "../Frog-UI/src/Insect/fly.css">
 <head>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.86.0/dist/phaser.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <meta charset="UTF-8">
     <title>Idle Frog!</title>
+
     <style>
         html {cursor: url("../Assets/cursor.png"), auto;}
         html:active{cursor: url("../Assets/cursor.png"), auto;}
     </style>
+
+     <script> 
+        $(function(){
+        $("#includeHtml").load("../Frog-UI/src/Upgrade/upgrade.html"); 
+        });
+    </script> 
 </head>
 
 <body style = "background-color: rgb(60, 60, 82);">
-    <embed name="hitman" src="../Assets/Kevin MacLeod; Hitman (128kbit_AAC).m4a", type="module" loop="true" hidden="true" autostart="true">
-    <!-- <center><h1 style = "color: aliceblue;">silly frog game :3</h1></center> -->
-    <script type = "module", src = '/UI/UI.js'></script>
+    <embed name="hitman" src="../Assets/Kevin MacLeod; Hitman (128kbit_AAC).m4a" type="audio/mpeg" loop="true" hidden="true" autostart="true">
+    <script src = 'UI.js' type = "module"></script>
+    <script type="module" src="../Frog-UI/src/Insect/fly.js"></script>
+    <script type="module" src="../Frog-UI/src/Upgrade/upgrade.js"></script>
+    
+     <div id = "includeHtml", style = "
+     position: absolute;
+     width: 85%;
+     height:95%;
+     top:5%;
+     bottom:0;
+     left:0;
+     right:5%;
+     "></div> 
+    
+    
 </body>
 
 </html>
