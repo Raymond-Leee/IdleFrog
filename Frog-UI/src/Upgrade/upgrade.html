@@ -3,55 +3,66 @@
 <head>
 </head>
 <style>
-.dropdown {
-    color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
+    .dropdown {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        color: black;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        min-width: 200px;
+    }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
-.dropdown-content {
-    display: none;
-    color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
+    .dropdown-content {
+        display: none;
+          position: absolute;
+          right: 0;
+          background-color: #f9f9f9;
+          min-width: 200px;
+          z-index: 1;
+    }
 
-.dropdown-content a {
-    display: block;
-}
+    .dropdown-content a {
+        display: block;
+    }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+    .dropdown-content a:hover {background-color: #f1f1f1}
 
-.show {display:block;}
+    .show {display:block;}
+
+    .button {
+          color: black;
+          text-align: left;
+          display: inline-block;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+          cursor: pointer;
+        background-color: transparent;
+    }
 </style>
 
 <body>
 
-<div class="dropdown">
+<div class="dropdown" style="float:right">
     <button id="upgradeButton" class="dropdown">Upgrades</button>
     <div id="upgradeDropdown" class="dropdown-content">
-        <button type="button">Upgrade tongue width</button>
-        <button type="button">Upgrade spawn rate</button>
-        <button type="button">Upgrade tongue multiplier</button>
-        <button type="button">Upgrade fly multiplier</button>
+        <button onclick="" class="button">Upgrade tongue width</button>
+        <button onclick="" class="button">Upgrade spawn rate</button>
+        <button onclick="" class="button">Upgrade tongue multiplier</button>
+        <button onclick="" class="button">Upgrade fly multiplier</button>
     </div>
 </div>
 
 <script>
-document.getElementById("upgradeButton").onclick = function() {myFunction()};
+    document.getElementById("upgradeButton").onclick = function() {myFunction()};
 
-function myFunction() {
-    document.getElementById("upgradeDropdown").classList.toggle("show");
-}
+    function myFunction() {
+        document.getElementById("upgradeDropdown").classList.toggle("show");
+    }
 </script>
 
 </body>
