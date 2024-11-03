@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<link rel="stylesheet" href = "/Frog-UI/src/Insect/fly.css">
 <head>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.86.0/dist/phaser.js"></script>
     <meta charset="UTF-8">
     <title>Idle Frog!</title>
+    <style>
+        html {cursor: url("../Assets/cursor.png"), auto;}
+        html:active{cursor: url("../Assets/cursor.png"), auto;}
+    </style>
 </head>
 
 <body style = "background-color: rgb(60, 60, 82);">
+    <embed name="hitman" src="../Assets/Kevin MacLeod; Hitman (128kbit_AAC).m4a" loop="true" hidden="true" autostart="true">
     <!-- <center><h1 style = "color: aliceblue;">silly frog game :3</h1></center> -->
     <script type = "text/javascript">   
         var config = {
@@ -16,7 +21,7 @@
             height: 720,
             //scaling
             scale: {
-                mode: Phaser.Scale.HEIGHT_CONTROLS_WIDTH   ,
+                mode: Phaser.Scale.HEIGHT_CONTROLS_WIDTH,
                 autoCenter: Phaser.Scale.CENTER_BOTH
             },
             scene: {
@@ -37,10 +42,10 @@
             this.load.image('background', '../Assets/blue.jpg');
             this.load.image('lilypad', '../Assets/lilypad.png');
             this.load.image('frog', '../Assets/frog.png');
-            this.load.sprite('tongue', '../Assets/tongue.png');
+            this.load.image('tongue', '../Assets/tongue.png');
             
             //COMMENTED OUT TO KEEP MEM DOWN LOL
-            //this.load.script('spawnFly', "../Frog-UI/src/Insect/fly.js");
+            this.load.script('spawnFly', "../Frog-UI/src/Insect/fly.js");
             
         }
     
