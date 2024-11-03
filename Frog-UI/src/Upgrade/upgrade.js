@@ -50,6 +50,9 @@ function initUpgrades(){
     //upgradeFlyMultiplierButton.innerHTML = "Upgrade Fly Multiplier"
     upgradeFlyMultiplierButton.onclick = () =>{
         upgradeFlyMultiplier();
+        window.pointMultiplierLevel += 1
+        upgradeFlyMultiplierButton.innerHTML = `(${window.pointMultiplierLevel}) 
+        Upgrade Fly Point Multiplier: ${window.pointMultiplierCost + (10 * Math.pow(1.1, window.pointMultiplierLevel))} Points`
         console.log(`${flyPoints}`)
     }
 
@@ -57,6 +60,9 @@ function initUpgrades(){
     //upgradeSwatSpeedButton.innerHTML = "Upgrade Auto Swatter Speed"
     upgradeSwatSpeedButton.onclick = () =>{
         upgradeSwatSpeed()
+        window.swatRateLevel += 1
+        upgradeSwatSpeedButton.innerHTML = `(${window.swatRateLevel}) 
+        Upgrade Swat Speed: ${window.swatRateCost + (10 * Math.pow(1.1, swatRateLevel))} Points`
         console.log(`${window.maxTime}`)
     }
 
@@ -64,13 +70,19 @@ function initUpgrades(){
     //upgradeAutoSwatterButton.innerHTML = "Upgrade Swat Speed"
     upgradeAutoSwatterButton.onclick = () =>{
         upgradeAutoSwatter()
+        window.autoSwatLevel += 1
+        upgradeAutoSwatterButton.innerHTML = `(${window.autoSwatLevel}) 
+        Upgrade Spawn Rate: ${window.autoSwatCost + (10 * Math.pow(1.1, window.autoSwatLevel))} Points`
         console.log(`${window.swatValue}`)
     }
 
     const upgradeSpawnButton = document.getElementById("spawn");
-    upgradeSpawnButton.innerHTML = "Upgrade Spawn Time";
+    //upgradeSpawnButton.innerHTML = "Upgrade Spawn Time";
     upgradeSpawnButton.onclick = () => {
         window.spawnSpeed = upgradeSpawnSpeed(window.spawnSpeed, flyMult, minSpawn);
+        window.spawnRateLevel += 1
+        upgradeSpawnButton.innerHTML = `(${window.spawnRateLevel}) 
+        Upgrade Spawn Rate: ${window.spawnRateCost + (10 * Math.pow(1.1, window.spawnRateLevel))} Points`
         console.log(`New Interval: ${window.spawnSpeed}ms`);
     };
 }
