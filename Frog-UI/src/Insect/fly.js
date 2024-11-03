@@ -1,3 +1,5 @@
+import { upgradeSpawnSpeed } from "../Upgrade/upgrade";
+
 class Fly {
     constructor(points) {
         this.points = points;
@@ -16,6 +18,7 @@ class Fly {
         //button.innerHTML = "Fly";
         button.id = this.id
         button.onclick = () => this.killFly();
+        button.onclick = () => this.increaseSpawnSpeed();
         button.style.position = "absolute"; // btn can be placed anywhere
         button.className = "flies"
         const image = document.createElement("img")
@@ -30,9 +33,24 @@ class Fly {
         document.body.appendChild(button);
         return button;
     }
+    increaseSpawnSpeed(){
+        this.spawnSpeed = 1
+    }
 }
 function spawnFly(){
-    fly = new Fly(1)
+    const fly = new Fly(1)
     fly.createButton()
 }
-setInterval(spawnFly, 1000); 
+let spawnSpeed = 500
+let mult = 0.9
+let min = 100
+
+window.spawnFlyInterval = setInterval(spawnFly, spawnSpeed); 
+
+const upgradeSpawnButton = document.createElement("button");
+upgradeSpawnButton.innerHTML = "Upgrade Spawn Time";
+upgradeSpawnButton.onclick = () => {
+    spawnSpeed = upgradeSpawnSpeed(spawnSpeed, mult, min);
+    console.log(`New Interval: ${currentInterval}ms`);
+};
+document.body.appendChild(upgradeSpawnButton);
