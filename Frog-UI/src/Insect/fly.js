@@ -4,6 +4,14 @@ window.flyPoints = 1 // fly mult
 window.swatValue = 0 // swatting
 window.maxTime = 2000 // disappear time
 window.points=0 // total pts
+window.autoSwatLevel = 0 // initial automatic fly swatter level
+window.swatRateLevel = 0 // initial fly swatter rate level
+window.spawnRateLevel = 0 // initial fly spawn rate level
+window.pointMultiplierLevel = 0 // initial point multiplier level
+window.autoSwatCost = 50 // initial automatic fly swatter cost
+window.swatRateCost = 100 // initial fly swatter rate cost
+window.spawnRateCost = 50 // initial fly spawn rate cost
+window.pointMultiplierCost = 100 // initial point multiplier cost
 
 class Fly {
     constructor() {
